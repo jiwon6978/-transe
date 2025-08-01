@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         div {
+            border: 1px solid;
+        }
+         .ancestor{
+            width : 750px;
+            height : 750px;
+            background-color: aquamarine;
+            border : 1px solid;
+            margin: 50px;
+           
+        }
+        .parent {
+            width: 500px;
+            height: 500px;
+            background-color: royalblue;
+            position:relative;
+            margin: 50px;
+        
+        }
+
+        .son {
+            width: 50px;
+            height: 50px;
+            background-color: orange;
+        }
+        .son:nth-child(1){
+            position:absolute;
+            left:0;
+            top:0;
+
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="ancestor">
+        <div class="parent">
+            <div class="son">1</div>
+            <div class="son">2</div>
+            <div class="son">3</div>
+            <div class="son">4</div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+
+<!-- 
+
+absolute :  부모를 기준으로 하는데 포지션 없으면 조상으로 가고
+            부모 - 조상에 포지션이 없으면 바디를 기준으로 함
+            겹치는 문제도 발생할 수 있음.
+-->
